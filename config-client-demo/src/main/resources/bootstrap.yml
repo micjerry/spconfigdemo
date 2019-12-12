@@ -12,3 +12,9 @@ spring:
        uri: http://localhost:8888
        label: master
        profile: prod
+       
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
