@@ -19,11 +19,13 @@
    
    (4) 通过http://{ip_address}:{port}/actuator/refresh去触发配置重新下载
    
-   验证：修改git配置信息
+   验证：
    
-   执行curl http://localhost:3302/message，可以查看仍是老的配置信息
+    (1) 修改git配置信息并提交
    
-   执行curl -X POST http://localhost:3302/actuator/refresh 触发配置更新
+    (2) 执行curl http://localhost:3302/message，可以查看仍是老的配置信息
    
-   再次执行curl http://localhost:3302/message，获取到新配置
+    (3) 执行curl -X POST http://localhost:3302/actuator/refresh 触发配置更新
+   
+    (4) 再次执行curl http://localhost:3302/message，获取到新配置
  
